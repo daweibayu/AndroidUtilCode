@@ -1,35 +1,100 @@
-* ### 拼音相关→[PinyinUtils.java][pinyin.java]→[Test][pinyin.test]
-```
-ccs2Pinyin           : 汉字转拼音
-ccs2Pinyin           : 汉字转拼音
-getPinyinFirstLetter : 获取第一个汉字首字母
-getPinyinFirstLetters: 获取所有汉字的首字母
-getSurnamePinyin     : 根据名字获取姓氏的拼音
-getSurnameFirstLetter: 根据名字获取姓氏的首字母
-```
+## How to use
 
-* ### 线程池相关→[ThreadPoolUtils.java][thread_pool.java]
+You should copy the following classes which you want to use in your project.
+
+
+## APIs
+
+* ### About Brightness -> [BrightnessUtils.java][brightness.java] -> [Demo][brightness.demo]
 ```
-ThreadPoolUtils       : ThreadPoolUtils构造函数
-execute               : 在未来某个时间执行给定的命令
-execute               : 在未来某个时间执行给定的命令链表
-shutDown              : 待以前提交的任务执行完毕后关闭线程池
-shutDownNow           : 试图停止所有正在执行的活动任务
-isShutDown            : 判断线程池是否已关闭
-isTerminated          : 关闭线程池后判断所有任务是否都已完成
-awaitTermination      : 请求关闭、发生超时或者当前线程中断
-submit                : 提交一个Callable任务用于执行
-submit                : 提交一个Runnable任务用于执行
-invokeAll, invokeAny  : 执行给定的任务
-schedule              : 延迟执行Runnable命令
-schedule              : 延迟执行Callable命令
-scheduleWithFixedRate : 延迟并循环执行命令
-scheduleWithFixedDelay: 延迟并以固定休息时间循环执行命令
+isAutoBrightnessEnabled
+setAutoBrightnessEnabled
+getBrightness
+setBrightness
+setWindowBrightness
+getWindowBrightness
 ```
 
+* ### About Clipboard -> [ClipboardUtils.java][clipboard.java] -> [Test][clipboard.test]
+```
+copyText
+getText
+copyUri
+getUri
+copyIntent
+getIntent
+```
+
+* ### About Clone -> [CloneUtils.java][clone.java] -> [Test][clone.test]
+```
+deepClone
+```
+
+* ### About Coordinate -> [CoordinateUtils.java][coordinate.java] -> [Test][coordinate.test]
+```
+bd09ToGcj02
+gcj02ToBd09
+gcj02ToWGS84
+wgs84ToGcj02
+bd09ToWGS84
+wgs84ToBd09
+```
+
+* ### About Flashlight -> [FlashlightUtils.java][flashlight.java] -> [Demo][flashlight.demo]
+```
+getInstance
+Instance.register
+Instance.unregister
+Instance.setFlashlightOn
+Instance.setFlashlightOff
+Instance.isFlashlightOn
+isFlashlightEnable
+```
+
+* ### About Location -> [LocationUtils.java][location.java] -> [Demo][location.demo]
+```
+isGpsEnabled
+isLocationEnabled
+openGpsSettings
+register
+unregister
+getAddress
+getCountryName
+getLocality
+getStreet
+isBetterLocation
+isSameProvider
+```
+
+* ### About Pinyin -> [PinyinUtils.java][pinyin.java] -> [Demo][pinyin.demo]
+```
+ccs2Pinyin
+ccs2Pinyin
+getPinyinFirstLetter
+getPinyinFirstLetters
+getSurnamePinyin
+getSurnameFirstLetter
+```
 
 
-[pinyin.java]: https://github.com/Blankj/AndroidUtilCode/blob/master/subutil/src/main/java/com/blankj/subutil/util/PinyinUtils.java
-[pinyin.test]: https://github.com/Blankj/AndroidUtilCode/blob/master/subutil/src/test/java/com/blankj/subutil/util/PinyinUtilsTest.java
 
-[thread_pool.java]: https://github.com/Blankj/AndroidUtilCode/blob/master/subutil/src/main/java/com/blankj/subutil/util/ThreadPoolUtils.java
+[brightness.java]: https://github.com/Blankj/AndroidUtilCode/blob/master/subutil/lib/src/main/java/com/blankj/subutil/util/BrightnessUtils.java
+[brightness.demo]: https://github.com/Blankj/AndroidUtilCode/blob/master/subutil/pkg/src/main/java/com/blankj/subutil/pkg/feature/brightness/BrightnessActivity.java
+
+[clipboard.java]: https://github.com/Blankj/AndroidUtilCode/blob/master/subutil/lib/src/main/java/com/blankj/subutil/util/ClipboardUtils.java
+[clipboard.test]: https://github.com/Blankj/AndroidUtilCode/blob/master/subutil/lib/src/test/java/com/blankj/subutil/util/ClipboardUtilsTest.java
+
+[clone.java]: https://github.com/Blankj/AndroidUtilCode/blob/master/subutil/lib/src/main/java/com/blankj/subutil/util/CloneUtils.java
+[clone.test]: https://github.com/Blankj/AndroidUtilCode/blob/master/subutil/lib/src/test/java/com/blankj/subutil/util/CloneUtilsTest.java
+
+[coordinate.java]: https://github.com/Blankj/AndroidUtilCode/blob/master/subutil/lib/src/main/java/com/blankj/subutil/util/CoordinateUtils.java
+[coordinate.test]: https://github.com/Blankj/AndroidUtilCode/blob/master/subutil/lib/src/test/java/com/blankj/subutil/util/CoordinateUtilsTest.java
+
+[flashlight.java]: https://github.com/Blankj/AndroidUtilCode/blob/master/subutil/lib/src/main/java/com/blankj/subutil/util/FlashlightUtils.java
+[flashlight.demo]: https://github.com/Blankj/AndroidUtilCode/blob/master/subutil/pkg/src/main/java/com/blankj/subutil/pkg/feature/flashlight/FlashlightActivity.java
+
+[location.java]: https://github.com/Blankj/AndroidUtilCode/blob/master/subutil/lib/src/main/java/com/blankj/subutil/util/LocationUtils.java
+[location.demo]: https://github.com/Blankj/AndroidUtilCode/blob/master/subutil/pkg/src/main/java/com/blankj/subutil/pkg/feature/location/LocationActivity.java
+
+[pinyin.java]: https://github.com/Blankj/AndroidUtilCode/blob/master/subutil/lib/src/main/java/com/blankj/subutil/util/PinyinUtils.java
+[pinyin.demo]: https://github.com/Blankj/AndroidUtilCode/blob/master/subutil/pkg/src/main/java/com/blankj/subutil/pkg/feature/pinyin/PinyinActivity.java
